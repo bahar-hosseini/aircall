@@ -16,13 +16,30 @@ const CallList = () => {
       )
       .then((res) => {
         console.log(res.data);
+        setCalls(res.data);
       })
       .catch((error) => {
         console.log(`The Error is: ${error}`);
       });
   }, []);
 
-  return <div></div>;
+  const callItem = calls.map((call, index) => {
+    return (
+      <CallListItem
+        key={index}
+        direction={call.direction}
+        from={call.from}
+        to={call.to}
+        via={call.via}
+        duration={call.duration}
+      />
+    );
+  });
+  return (
+    <div>
+      <div>{callItem}</div>
+    </div>
+  );
 };
 
 export default CallList;
