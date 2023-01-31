@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-import { format, formatDistance, formatRelative, subDays } from 'date-fns';
+import { format } from 'date-fns';
 
 //Internal Modules
 import '../css/CallListItem.css';
@@ -29,7 +29,7 @@ const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
       )
       .then((res) => {
         console.log(res);
-        // navigate('/');
+        navigate('/');
       })
       .catch((error) => {
         console.log(`The Error is: ${error}`);
