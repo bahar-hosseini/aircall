@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 
+//Internal Modules
+import '../css/callDetails.css';
 const CallDetails = () => {
   const { id } = useParams();
 
@@ -55,7 +57,7 @@ const CallDetails = () => {
 
   return (
     <div>
-      <h2>Detail Call:</h2>
+      <h2>Detail Call</h2>
       <button onClick={() => navigate(-1)}>Back</button>
       <p>call type: {call_type}</p>
       <p>duration: {duration}</p>
@@ -64,7 +66,9 @@ const CallDetails = () => {
       <p>to: {to}</p>
       <p>via: {via}</p>
       <p>Direction:{direction}</p>
-      <button onClick={handleClick}>Archive</button>
+      <button onClick={handleClick}>
+        Archive <i className='fa fa-thin fa-box-archive'></i>
+      </button>
     </div>
   );
 };

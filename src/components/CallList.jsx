@@ -4,12 +4,12 @@ import axios from 'axios';
 
 //Internal Modules
 import CallListItem from './CallListItem.jsx';
-import '../css/CallList.css';
+import '../css/callList.css';
 import { searchContext } from '../providers/SearchProvider.jsx';
 
-const CallList = () => {
+const CallList = ({ history }) => {
   const { calls } = useContext(searchContext);
-
+  console.log(history);
   const callItem = calls.map((call, index) => {
     if (call.is_archived === false) {
       return (

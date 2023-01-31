@@ -1,0 +1,9 @@
+button {
+  background-color: #676870;
+  padding: 0.5rem 0.75rem;
+  width: 4rem;
+  border-radius: 40px;
+  border: none;
+  filter: drop-shadow(0px 0px 4px #00000025);
+  color: #d2d5e0;
+}

@@ -1,6 +1,11 @@
 //External Modules
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  // BrowserRouter as Router,
+  Route,
+  Routes,
+  HashRouter as Router,
+} from 'react-router-dom';
 
 //Internal Modules
 import CallList from '../components/CallList.jsx';

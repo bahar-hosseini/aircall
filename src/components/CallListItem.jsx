@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 
 //Internal Modules
-import '../css/CallListItem.css';
+import '../css/callListItem.css';
 
 const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   const navigate = useNavigate();
@@ -37,12 +37,18 @@ const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   };
   return (
     <div className='call-container'>
-      <p>Date: {fotmatedDate} </p>
-      <Link to={`/${id}`}>
-        <h3>from :{from}</h3>
-        <h3>to: {to}</h3>
-        <h3>is archived: {String(isArchived)}</h3>
+      <p>
+        <i className='fa fa-thin fa-ellipsis'></i>
+        {fotmatedDate} <i className='fa fa-thin fa-ellipsis'></i>
+      </p>
+      <Link to={`/${id}`} className='information'>
+        More details: <i className='fa fa-sharp fa-solid fa-circle-info'></i>
       </Link>
+
+      <h3>
+        <i className='fa fa-thin fa-phone'> </i>from :{from}
+      </h3>
+      <h3>Tried to call {to}</h3>
       {isArchived && <button onClick={handleUnarchive}>unarchive</button>}
     </div>
   );
