@@ -1,17 +1,14 @@
 //External Modules
-import React, { useEffect, useState, useContext } from 'react';
-import axios from 'axios';
+import React, { useContext } from 'react';
 
 //Internal Modules
-import CallListItem from './CallListItem.jsx';
-import '../css/CallList.css';
 import { searchContext } from '../providers/SearchProvider.jsx';
+import CallListItem from '../components/CallListItem.jsx';
 
-const CallList = () => {
+const Archive = () => {
   const { calls } = useContext(searchContext);
-
   const callItem = calls.map((call, index) => {
-    if (call.is_archived === false) {
+    if (call.is_archived !== false) {
       return (
         <CallListItem
           key={index}
@@ -33,4 +30,4 @@ const CallList = () => {
   );
 };
 
-export default CallList;
+export default Archive;

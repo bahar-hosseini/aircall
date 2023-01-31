@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CallList from '../components/CallList.jsx';
 import Navbar from '../components/Navbar.jsx';
 import CallDetails from '../components/CallDetails.jsx';
+import Archive from './Archive.jsx';
 
 const HomeScreen = () => {
   return (
@@ -13,6 +14,7 @@ const HomeScreen = () => {
       <Router>
         <Navbar />
         <Routes>
+          <Route path='/archive' element={<Archive />} />;
           <Route path='/:id' element={<CallDetails />} />
           <Route path='/' element={<CallList />} exact />
         </Routes>
