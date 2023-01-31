@@ -4,11 +4,16 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+import { format, formatDistance, formatRelative, subDays } from 'date-fns';
+
 //Internal Modules
 import '../css/CallListItem.css';
 
-const CallListItem = ({ id, from, to, isArchived }) => {
+const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   const navigate = useNavigate();
+  const date = new Date(createdAt).toISOString().split('T')[0];
+  // console.log(new Date(test));
+  const fotmatedDate = format(new Date(date), 'MMM, d, yyyy');
 
   //Function to handle the button that sends patch request to unarchive calls
   const handleUnarchive = () => {
@@ -33,6 +38,7 @@ const CallListItem = ({ id, from, to, isArchived }) => {
   };
   return (
     <div className='call-container'>
+      <p>Date: {fotmatedDate} </p>
       <Link to={`/${id}`}>
         <h3>from :{from}</h3>
         <h3>to: {to}</h3>

@@ -14,8 +14,8 @@ const HomeScreen = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/archive' element={<Archive />} />;
           <Route path='/:id' element={<CallDetails />} />
+          <Route path='/archive' element={<Archive />} />;
           <Route path='/' element={<CallList />} exact />
         </Routes>
       </Router>

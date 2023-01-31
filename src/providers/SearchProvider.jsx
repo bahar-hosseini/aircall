@@ -22,7 +22,7 @@ export default function SearchProvider(props) {
       .catch((error) => {
         console.log(`The Error is: ${error}`);
       });
-  });
+  }, []);
   const providerData = { calls };
   return (
     <searchContext.Provider value={providerData}>
