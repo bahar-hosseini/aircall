@@ -1,40 +1,29 @@
 //External Modules
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 
 //Internal Modules
 import CallListItem from './CallListItem.jsx';
 import '../css/CallList.css';
+import { searchContext } from '../providers/SearchProvider.jsx';
 
 const CallList = () => {
-  const [calls, setCalls] = useState([]);
-
-  // Fetch all calls
-  useEffect(() => {
-    axios
-      .get(
-        'https://charming-bat-singlet.cyclic.app/https://cerulean-marlin-wig.cyclic.app/activities'
-      )
-      .then((res) => {
-        console.log(res.data);
-        setCalls(res.data);
-      })
-      .catch((error) => {
-        console.log(`The Error is: ${error}`);
-      });
-  }, []);
+  const { calls } = useContext(searchContext);
 
   const callItem = calls.map((call, index) => {
-    return (
-      <CallListItem
-        key={index}
-        direction={call.direction}
-        from={call.from}
-        to={call.to}
-        via={call.via}
-        duration={call.duration}
-      />
-    );
+    if (call.is_archived === false) {
+      return (
+        <CallListItem
+          key={index}
+          id={call.id}
+          direction={call.direction}
+          from={call.from}
+          to={call.to}
+          via={call.via}
+          duration={call.duration}
+        />
+      );
+    }
   });
   return (
     <div className='container'>

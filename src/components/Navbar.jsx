@@ -11,9 +11,10 @@ const Navbar = () => {
       <Link to='/' className='navbar-link'>
         <h3>All Calls</h3>
       </Link>
-      <Link to='#' className='navbar-link'>
+      {/* <Link to={`/${prevState.id}`} className='navbar-link'>
         <h3>Call Details</h3>
-      </Link>
+      </Link> */}
+
       <div className='animation start-allcalls'></div>
     </nav>
   );
