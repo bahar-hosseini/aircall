@@ -14,8 +14,10 @@ const Navbar = () => {
       {/* <Link to={`/${prevState.id}`} className='navbar-link'>
         <h3>Call Details</h3>
       </Link> */}
-
-      <div className='animation start-allcalls'></div>
+      <Link to='/archive'>
+        <h3>Archive</h3>
+      </Link>
+      ;<div className='animation start-allcalls'></div>
     </nav>
   );
 };
