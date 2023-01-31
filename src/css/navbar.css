@@ -1,0 +1,84 @@
+/* 
+ .navbar{
+  width: 376px;
+  height: 50px;
+  background-color: #ccc;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+}
+
+ .navbar-link{
+width: 10rem;
+height: 100%;
+text-transform: uppercase;
+text-decoration: none;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+padding-bottom: 2rem;
+font-size: 1rem;
+color: #333;
+position: relative;
+z-index: 1;
+}
+
+
+.animation{
+position: absolute;
+height: 100%;
+top: 0;
+z-index: 0;
+background-color: magenta;
+width: 100px;
+}
+
+ */
+
+nav{
+position: relative;
+/* margin: 270px auto 0; */
+width: 376px;
+height: 50px;
+background-color: #ccc;
+font-size: 0;
+box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 1);
+}
+nav a {
+  text-decoration: none;
+font-size: 15px;
+text-transform: capitalize;
+color: rgb(44, 41, 41);
+line-height: 50px;
+position: relative;
+z-index: 1;
+display: inline-block;
+text-align: center;
+
+}
+
+nav .animation{
+  position: absolute;
+  height: 5px;
+bottom: 0;
+  z-index: 0;
+  background-color: seagreen;
+  width: 100px;
+  border-radius: 10px;
+
+  transition: all .5s ease 0s;
+}
+a:nth-child(1){
+  width: 100px;
+}
+nav .start-allcalls,a:nth-child(1):hover~.animation{
+  width: 100px;
+  left:0
+}
+a:nth-child(2){
+  width: 110px;
+}
+nav .start-calldetails,a:nth-child(2):hover~.animation{
+  width: 110px;
+  left:100px
+}
