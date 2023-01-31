@@ -12,7 +12,6 @@ import '../css/CallListItem.css';
 const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   const navigate = useNavigate();
   const date = new Date(createdAt).toISOString().split('T')[0];
-  // console.log(new Date(test));
   const fotmatedDate = format(new Date(date), 'MMM, d, yyyy');
 
   //Function to handle the button that sends patch request to unarchive calls
