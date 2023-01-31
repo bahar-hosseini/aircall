@@ -9,7 +9,7 @@ import { searchContext } from '../providers/SearchProvider.jsx';
 
 const CallList = ({ history }) => {
   const { calls } = useContext(searchContext);
-  console.log(history);
+
   const callItem = calls.map((call, index) => {
     if (call.is_archived === false) {
       return (

@@ -14,7 +14,7 @@ const Navbar = () => {
       <Link to='/archive'>
         <h3>Archive</h3>
       </Link>
-      ;<div className='animation start-allcalls'></div>
+      ;<div className='animation'></div>
     </nav>
   );
 };

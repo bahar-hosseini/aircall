@@ -1,11 +1,50 @@
 .call-container{
   border-radius: 7px;
 box-shadow: 0 1px 5px rgb(138, 137, 137);
-  padding: 5px;
-  margin: 5px;
+  padding: 10px;
+  margin: 20px;
+  height: auto;
+display: grid;
+grid-template-columns: 20% 60% 20%;
+grid-template-rows: auto;
+}
+.call-container:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.call-container h3{
+  font-size: 1em;
+}
+.call-container p{
+  color: rgb(144, 144, 144);
+  font-size: 1.2em;
+}
+.call-container >ul{
+  list-style: none;
+ 
+}
+.time{
 
+  padding-top: 40%;
+  font-size: 0.75rem;
+  color: rgb(58, 57, 57);
+
+}
+li:first-child{
+  color: rgb(144, 144, 144);
+  font-weight: bold;
+  font-size: 1.23rem;
+  padding-bottom: 2rem;
 }
 .call-container .information{
   text-decoration: none;
-  color:red
+  font-size: 1.25rem;
+  color:#000080;
+}
+.information span{
+  font-size: 0.75em;
+}
+.phone-icon {
+  color: #40CA3F;
+font-size: 1.5rem;
+padding-top: 55%;
 }
