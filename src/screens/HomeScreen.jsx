@@ -12,7 +12,7 @@ const HomeScreen = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' element={<CallList />} />
+          <Route path='/' element={<CallList />} exact />
         </Routes>
       </Router>
     </div>

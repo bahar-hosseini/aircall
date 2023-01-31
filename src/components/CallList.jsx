@@ -4,6 +4,7 @@ import axios from 'axios';
 
 //Internal Modules
 import CallListItem from './CallListItem.jsx';
+import '../css/CallList.css';
 
 const CallList = () => {
   const [calls, setCalls] = useState([]);
@@ -36,7 +37,7 @@ const CallList = () => {
     );
   });
   return (
-    <div>
+    <div className='container'>
       <div>{callItem}</div>
     </div>
   );
