@@ -4,10 +4,10 @@ import axios from 'axios';
 
 //Internal Modules
 import CallListItem from './CallListItem.jsx';
-import '../css/CallList.css';
+import '../css/callList.css';
 import { searchContext } from '../providers/SearchProvider.jsx';
 
-const CallList = () => {
+const CallList = ({ history }) => {
   const { calls } = useContext(searchContext);
 
   const callItem = calls.map((call, index) => {

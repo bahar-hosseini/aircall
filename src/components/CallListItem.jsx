@@ -3,17 +3,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
-import { format, formatDistance, formatRelative, subDays } from 'date-fns';
+import { format } from 'date-fns';
 
 //Internal Modules
-import '../css/CallListItem.css';
+import '../css/callListItem.css';
 
 const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   const navigate = useNavigate();
+
   const date = new Date(createdAt).toISOString().split('T')[0];
-  // console.log(new Date(test));
   const fotmatedDate = format(new Date(date), 'MMM, d, yyyy');
+
+  const date1 = new Date(createdAt).toISOString();
+
+  const formatedTime = format(new Date(date1), 'HH:mm bbb');
 
   //Function to handle the button that sends patch request to unarchive calls
   const handleUnarchive = () => {
@@ -30,7 +33,7 @@ const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
       )
       .then((res) => {
         console.log(res);
-        // navigate('/');
+        navigate('/');
       })
       .catch((error) => {
         console.log(`The Error is: ${error}`);
@@ -38,13 +41,32 @@ const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   };
   return (
     <div className='call-container'>
-      <p>Date: {fotmatedDate} </p>
-      <Link to={`/${id}`}>
-        <h3>from :{from}</h3>
-        <h3>to: {to}</h3>
-        <h3>is archived: {String(isArchived)}</h3>
-      </Link>
-      {isArchived && <button onClick={handleUnarchive}>unarchive</button>}
+      <i className='fa fa-thin fa-phone phone-icon'></i>
+      <ul>
+        <li>
+          <i className='fa fa-thin fa-ellipsis'></i>
+          {} {fotmatedDate}
+          {} <i className='fa fa-thin fa-ellipsis'></i>
+        </li>
+
+        <li>
+          <h3>From :{from}</h3>
+        </li>
+        <li>
+          <p>Tried to call {to}</p>
+          {isArchived && <button onClick={handleUnarchive}>unarchive</button>}
+        </li>
+      </ul>
+      <div>
+        <Link to={`/${id}`} className='information'>
+          <span>Archive-Details</span>{' '}
+          <i className='fa fa-sharp fa-solid fa-circle-info'></i>
+        </Link>
+        <div className='time'>
+          {/* <i className='fa fa-solid fa-ellipsis-vertical'></i> */}
+          <p>{formatedTime}</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -19,6 +19,7 @@ const Archive = () => {
           via={call.via}
           duration={call.duration}
           isArchived={call.is_archived}
+          createdAt={call.created_at}
         />
       );
     }

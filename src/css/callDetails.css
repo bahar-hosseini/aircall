@@ -1,0 +1,38 @@
+.container-detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+margin: 1rem;
+border-radius: 0.3rem 0.3rem 0 0;
+}
+.container-detail h2{
+  font-size: 1.5em;
+  padding:0.75rem 0 ;
+}
+.container-detail p{
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+/* Back Button */
+button:first-of-type {
+  background-color: #676870;
+  padding:0.5rem 0.75rem;
+  width: 5rem;
+  border-radius: 40px;
+  border: none;
+  filter: drop-shadow(0px 0px 4px #00000011);
+  color: #d2d5e0;
+  cursor: pointer;
+
+}
+/* Archive Button */
+button:nth-of-type(2n) {
+  background-color: #cecfd6;
+  padding:0.5rem 0.75rem;
+  border-radius: 40px;
+  border: none;
+  color: #1b1c1d;
+  width: 10rem;
+  cursor: pointer;
+
+}

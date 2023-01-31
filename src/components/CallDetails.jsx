@@ -2,7 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import { format } from 'date-fns';
 
+//Internal Modules
+import '../css/callDetails.css';
 const CallDetails = () => {
   const { id } = useParams();
 
@@ -48,23 +51,27 @@ const CallDetails = () => {
       .then((res) => {
         setCall(res.data);
       })
+
       .catch((error) => {
         console.log(`The Error is: ${error}`);
       });
   }, []);
 
   return (
-    <div>
-      <h2>Detail Call:</h2>
-      <button onClick={() => navigate(-1)}>Back</button>
-      <p>call type: {call_type}</p>
-      <p>duration: {duration}</p>
-      <p>created_at: {created_at}</p>
-      <p>from: {from}</p>
-      <p>to: {to}</p>
-      <p>via: {via}</p>
-      <p>Direction:{direction}</p>
-      <button onClick={handleClick}>Archive</button>
+    <div className='container-detail'>
+      <main>
+        <button onClick={() => navigate(-1)}>Back</button>
+        <h2>Detail Call</h2>
+        <p>call type: {call_type}</p>
+        <p>duration: {duration}</p>
+        <p>from: {from}</p>
+        <p>to: {to}</p>
+        <p>via: {via}</p>
+        <p>Direction:{direction}</p>
+        <button onClick={handleClick}>
+          Archive <i className='fa fa-thin fa-box-archive'></i>
+        </button>
+      </main>
     </div>
   );
 };
