@@ -4,6 +4,7 @@ import { Router, Route } from 'react-router-dom';
 
 import Header from './Header.jsx';
 import HomeScreen from './screens/HomeScreen.jsx';
+import Footer from './components/Footer.jsx';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <div className='container-view'>Some activities should be here</div>
       <HomeScreen />
+      <Footer />
     </div>
   );
 };
