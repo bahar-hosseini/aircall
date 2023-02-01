@@ -2,10 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import { format } from 'date-fns';
 
-//Internal Modules
-
+/* Component for showing details of each call by Click on "i" icon */
 const CallDetails = () => {
   const { id } = useParams();
 
@@ -23,6 +21,7 @@ const CallDetails = () => {
     direction,
   } = call;
 
+  // Patch request and update is_active to archive a call this button is inside the detail page
   const handleClick = () => {
     const data = { is_archived: true };
     axios
