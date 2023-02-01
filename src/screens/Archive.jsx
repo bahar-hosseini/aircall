@@ -5,6 +5,7 @@ import React, { useContext } from 'react';
 import { searchContext } from '../providers/SearchProvider.jsx';
 import CallListItem from '../components/CallListItem.jsx';
 
+/* Component that shows are archived call /you are able to unarchived them by click the button and then redirect to home page */
 const Archive = () => {
   const { calls } = useContext(searchContext);
   const callItem = calls.map((call, index) => {
