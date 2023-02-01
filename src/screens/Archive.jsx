@@ -25,7 +25,7 @@ const Archive = () => {
     }
   });
   return (
-    <div className='container'>
+    <div className='container-calls-list'>
       <div>{callItem}</div>
     </div>
   );
