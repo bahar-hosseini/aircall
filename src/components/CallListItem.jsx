@@ -58,10 +58,15 @@ const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
         </li>
       </ul>
       <div>
-        <Link to={`/${id}`} className='information'>
-          <span>Archive-Details</span>{' '}
-          <i className='fa fa-sharp fa-solid fa-circle-info'></i>
-        </Link>
+        <div className='tooltip'>
+          <Link to={`/${id}`} className='information'>
+            <span>Details</span>{' '}
+            <i className='fa fa-sharp fa-solid fa-circle-info'></i>
+            <div>
+              <span className='tooltiptext'>Click to Archive</span>
+            </div>
+          </Link>
+        </div>
         <div className='time'>
           {/* <i className='fa fa-solid fa-ellipsis-vertical'></i> */}
           <p>{formatedTime}</p>

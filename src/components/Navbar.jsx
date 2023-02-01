@@ -12,7 +12,7 @@ const Navbar = () => {
         <h3>All Calls</h3>
       </Link>
       <Link to='/archive'>
-        <h3>Archive</h3>
+        <h3>Archived</h3>
       </Link>
       ;<div className='animation'></div>
     </nav>

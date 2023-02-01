@@ -22,6 +22,7 @@ grid-template-rows: auto;
   list-style: none;
  
 }
+
 .time{
 
   padding-top: 40%;
@@ -38,10 +39,48 @@ li:first-child{
 .call-container .information{
   text-decoration: none;
   font-size: 1.25rem;
-  color:#000080;
+  color:#0c0c95;
 }
 .information span{
   font-size: 0.75em;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color:#0c0c95;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 12px 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: 70%;
+  left: 25%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 .phone-icon {
   color: #40CA3F;
