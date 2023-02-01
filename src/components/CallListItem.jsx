@@ -67,7 +67,6 @@ const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
           </Link>
         </div>
         <div className='time'>
-          {/* <i className='fa fa-solid fa-ellipsis-vertical'></i> */}
           <p>{formatedTime}</p>
         </div>
       </div>

@@ -13,6 +13,7 @@ import Navbar from '../components/Navbar.jsx';
 import CallDetails from '../components/CallDetails.jsx';
 import Archive from './Archive.jsx';
 import SearchProvider from '../providers/SearchProvider.jsx';
+import Footer from '../components/Footer.jsx';
 
 const HomeScreen = () => {
   return (
@@ -25,6 +26,7 @@ const HomeScreen = () => {
             <Route path='/archive' element={<Archive />} />;
             <Route path='/' element={<CallList />} exact />
           </Routes>
+          <Footer />
         </SearchProvider>
       </Router>
     </div>
