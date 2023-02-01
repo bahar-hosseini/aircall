@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 
 //Internal Modules
-import '../css/callDetails.css';
+
 const CallDetails = () => {
   const { id } = useParams();
 

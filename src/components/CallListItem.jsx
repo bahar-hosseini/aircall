@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 
 //Internal Modules
-import '../css/callListItem.css';
 
 const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   const navigate = useNavigate();
