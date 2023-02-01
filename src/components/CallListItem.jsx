@@ -5,8 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 
-//Internal Modules
-
+/*Component of each Card of Call /child of CallList component*/
 const CallListItem = ({ id, from, to, isArchived, createdAt }) => {
   const navigate = useNavigate();
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//Internal Modules
+/* All Calls (not archived) calls are in All Calls by Click on 'i' icon in details page and then click on archive button calls move to Archived tab */
 
 const Navbar = () => {
   return (

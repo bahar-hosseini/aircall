@@ -5,6 +5,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import CallListItem from './CallListItem.jsx';
 import { searchContext } from '../providers/SearchProvider.jsx';
 
+/* Parent of CallListItem file */
 const CallList = ({ history }) => {
   const { calls } = useContext(searchContext);
 
