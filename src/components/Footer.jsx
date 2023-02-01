@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        <h3>{misscallNumber}</h3>
+        <h3>Missed Calls: {misscallNumber}</h3>
       </div>
       <i className=' fa fa-duotone fa-square-phone'></i>
     </footer>
