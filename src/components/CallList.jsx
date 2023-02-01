@@ -1,6 +1,5 @@
 //External Modules
 import React, { useEffect, useState, useContext } from 'react';
-import axios from 'axios';
 
 //Internal Modules
 import CallListItem from './CallListItem.jsx';
@@ -27,7 +26,7 @@ const CallList = ({ history }) => {
     }
   });
   return (
-    <div className='container'>
+    <div className='container-calls-list'>
       <div>{callItem}</div>
     </div>
   );

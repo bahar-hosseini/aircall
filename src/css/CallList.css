@@ -1,7 +1,4 @@
-.container{
+.container-calls-list{
   height: 400px;
   overflow: scroll;
-}
-.container i:hover{
-  content: 'Click to see more details';
 }
